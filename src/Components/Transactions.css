@@ -1,0 +1,30 @@
+.Transactions {
+    display: flex;
+    font-family: monospace;
+    font-size: 20px;
+    /* justify-content: space-between; */
+}
+
+table {
+    width: 100%;
+}
+
+thead {
+    background-color: rgba(255, 0, 55, 0.295);
+    margin: 20px; 
+    /* Apparently table elements do not have margin property? */
+}
+th {
+    padding: 10px;
+    margin: 0 10px 0 10px;
+    /* Apparently table elements do not have margin property? */
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+tbody td {
+    text-align: center;
+}

@@ -1,0 +1,12 @@
+.NewTransaction {
+    display: flex;
+    justify-content: center;
+}
+
+button {
+    border: 2px solid blueviolet;
+    background-color: rgb(221, 204, 240);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+    margin: auto;
+}
