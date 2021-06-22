@@ -5,8 +5,10 @@ export default function Welcome() {
 
     return (
         <div className='Welcome'>
-            <h2>Welcome to my Budgeting Application.</h2>
-            <h3>We are here for all of your budgeting needs</h3>
+            <h1>Welcome to your favorite Budgeting Application.</h1>
+            <h2>We are here for all of your budgeting needs.</h2>
+            <h3>We will take care of you.</h3>
+            <h4>The customer.</h4>
         </div>
     )
 }

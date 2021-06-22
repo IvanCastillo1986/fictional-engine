@@ -1,6 +1,3 @@
-.App {
-}
-
 .NavBar {
   background-color: aquamarine;
   display: flex;
@@ -10,7 +7,6 @@
   margin-bottom: 80px;
   box-shadow: 0 10px 18px 2px grey;
 }
-
 .NavBar a {
   font-family: monospace;
   font-size: 25px;
@@ -22,4 +18,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  height: 110vh;
+  background-image: linear-gradient(#ddc3dd 65%, #bbb0bb 75%, #9a9a9a 85%);
+}
+.Welcome h1 {
+  margin-bottom: 60px;
+}
+
+.WeLive {
+  background-image: url(./Obey.png);
+  color: white;
+  font-family: "Bradley Hand", cursive;
+  padding: 30px 0 30px 0;
+}
+.WeLive h2 {
+  font-size: 40px;
 }

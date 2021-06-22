@@ -7,6 +7,7 @@ import NavBar from './NavBar'
 import Welcome from './Components/Welcome'
 import Index from './Pages/Index'
 import New from './Pages/New'
+import WeLive from './Components/WeLive'
 
 
 const API = apiURL()
@@ -38,6 +39,7 @@ function App() {
     <div className='App'>
       <NavBar />
       <Route exact path='/' component={Welcome} />
+      <Route exact path='/' component={WeLive} />
       <Route exact path='/transactions'>
         <Index transactions={transactions} />
       </Route>

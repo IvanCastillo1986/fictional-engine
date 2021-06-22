@@ -3,9 +3,8 @@ import NewTransaction from '../Components/NewTransaction'
 import './New.css'
 
 
-export default function New({ transactions, addTransaction }) {
-    
-    console.log(transactions[0])
+export default function New({ addTransaction }) {
+
 
     return (
         <div>
