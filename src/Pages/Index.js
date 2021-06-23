@@ -3,9 +3,8 @@ import Transactions from '../Components/Transactions'
 
 
 
-export default function Index({ transactions }) {
+export default function Index({ transactions, deleteTransaction }) {
 
-    console.log(transactions)
     
     const [ total, setTotal ] = useState(0)
 
@@ -20,7 +19,7 @@ export default function Index({ transactions }) {
     return (
         <div>
             <h2>Bank Account Total: ${total}</h2>
-            <Transactions transactions={transactions} />
+            <Transactions transactions={transactions} deleteTransaction={deleteTransaction} />
         </div>
     )
 }

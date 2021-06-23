@@ -4,11 +4,11 @@ import './Transactions.css'
 
 
 
-export default function Transactions({ transactions }) {
+export default function Transactions({ transactions, deleteTransaction }) {
     
 
     const mapTransactions = transactions.map((transaction, index) => {
-        return <Transaction key={index} transaction={transaction} index={index} />
+        return <Transaction key={index} transaction={transaction} index={index} deleteTransaction={deleteTransaction}/>
     })
 
     return (
@@ -19,6 +19,7 @@ export default function Transactions({ transactions }) {
                         <th>Date</th>
                         <th>Name</th>
                         <th>Amount</th>
+                        <th>Delete</th>
                     </tr>
                 </thead>
                 <tbody>

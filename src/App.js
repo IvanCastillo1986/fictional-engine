@@ -27,6 +27,15 @@ function App() {
     .catch((e) => console.log(e))
   }
 
+  const deleteTransaction = (index) => {
+    axios.delete(`${API}/transactions/${index}`)
+    .then(response => {
+      const updatedArray = [...transactions]
+      updatedArray.splice(index, 1)
+      setTransactions(updatedArray)
+    })
+  }
+
   useEffect(() => {
     axios.get(`${API}/transactions`)
     .then(response => {
@@ -41,7 +50,7 @@ function App() {
       <Route exact path='/' component={Welcome} />
       <Route exact path='/' component={WeLive} />
       <Route exact path='/transactions'>
-        <Index transactions={transactions} />
+        <Index transactions={transactions} deleteTransaction={deleteTransaction} />
       </Route>
       <Route path='/transactions/new'>
         <New transactions={transactions} addTransaction={addTransaction} />
