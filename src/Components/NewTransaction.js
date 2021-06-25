@@ -25,15 +25,17 @@ export default function NewTransaction({ addTransaction }) {
     return (
         <div className='NewTransaction'>
             <form onSubmit={handleSubmit} action="">
-                <label htmlFor="date">Date: </label><br />
-                <input onChange={handleChange} type="text" name="" id="date" /><br />
-                <label htmlFor="name">Name: </label><br />
-                <input onChange={handleChange} type="text" name="" id="name" /><br />
-                <label htmlFor="amount">Amount: </label><br />
-                <input onChange={handleChange} type="number" name="" id="amount" /><br />
-                <label htmlFor="from">From: </label><br />
-                <input onChange={handleChange} type="text" name="" id="from" /><br />
-                <button type="submit">Submit</button>
+                <label htmlFor="date">Date: </label>
+                <input onChange={handleChange} type="text" name="" id="date" />
+                <label htmlFor="name">Name: </label>
+                <input onChange={handleChange} type="text" name="" id="name" />
+                <label htmlFor="amount">Amount: </label>
+                <input onChange={handleChange} type="number" name="" id="amount" />
+                <label htmlFor="from">From: </label>
+                <input onChange={handleChange} type="text" name="" id="from" />
+                <div>
+                    <button type="submit">Submit</button>
+                </div>
             </form>
         </div>
     )

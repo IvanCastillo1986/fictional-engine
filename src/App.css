@@ -1,3 +1,5 @@
+/* CSS file for NavBar, Welcome, WeLive */
+
 .NavBar {
   background-color: aquamarine;
   display: flex;
@@ -34,3 +36,4 @@
 .WeLive h2 {
   font-size: 40px;
 }
+

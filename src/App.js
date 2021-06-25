@@ -8,6 +8,7 @@ import Welcome from './Components/Welcome'
 import Index from './Pages/Index'
 import New from './Pages/New'
 import WeLive from './Components/WeLive'
+import Edit from './Pages/Edit'
 
 
 const API = apiURL()
@@ -36,12 +37,21 @@ function App() {
     })
   }
 
+  const updateTransaction = (updatedTransaction, index) => {
+    axios.put(`${API}/transactions/${index}`, updatedTransaction)
+    .then(response => {
+      const newArr = [...transactions]
+      transactions[index] = updatedTransaction
+      setTransactions(newArr)
+    })
+  }
+
   useEffect(() => {
     axios.get(`${API}/transactions`)
     .then(response => {
       setTransactions(response.data)
     })
-  }, [])
+  }, [transactions])
 
   return (
 
@@ -52,7 +62,10 @@ function App() {
       <Route exact path='/transactions'>
         <Index transactions={transactions} deleteTransaction={deleteTransaction} />
       </Route>
-      <Route path='/transactions/new'>
+      <Route path='/transactions/:index/edit'>
+        <Edit updateTransaction={updateTransaction} transactions={transactions} />
+      </Route>
+      <Route exact path='/transactions/new'>
         <New transactions={transactions} addTransaction={addTransaction} />
       </Route>
     </div>

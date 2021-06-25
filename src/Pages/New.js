@@ -1,6 +1,6 @@
 import React from 'react'
 import NewTransaction from '../Components/NewTransaction'
-import './New.css'
+import './Index.css'
 
 
 export default function New({ addTransaction }) {

@@ -20,6 +20,7 @@ export default function Transactions({ transactions, deleteTransaction }) {
                         <th>Name</th>
                         <th>Amount</th>
                         <th>Delete</th>
+                        <th>Edit</th>
                     </tr>
                 </thead>
                 <tbody>
